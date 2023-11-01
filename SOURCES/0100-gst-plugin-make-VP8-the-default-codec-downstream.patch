@@ -1,0 +1,26 @@
+From aaf2a1c4c276e7e5dd4f7bc570e9053a9accac85 Mon Sep 17 00:00:00 2001
+From: Uri Lublin <uril@redhat.com>
+Date: Thu, 28 Nov 2019 14:48:10 +0200
+Subject: [spice-streaming-agent patch 100/101] gst-plugin: make VP8 the default codec (downstream)
+
+Signed-off-by: Uri Lublin <uril@redhat.com>
+---
+ src/gst-plugin.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/gst-plugin.cpp b/src/gst-plugin.cpp
+index 922b90d..b270e54 100644
+--- a/src/gst-plugin.cpp
++++ b/src/gst-plugin.cpp
+@@ -33,7 +33,7 @@ namespace gstreamer_plugin {
+ struct GstreamerEncoderSettings
+ {
+     int fps = 25;
+-    SpiceVideoCodecType codec = SPICE_VIDEO_CODEC_TYPE_H264;
++    SpiceVideoCodecType codec = SPICE_VIDEO_CODEC_TYPE_VP8;
+     std::string encoder;
+     std::vector<std::pair<std::string, std::string>> prop_pairs;
+ };
+-- 
+2.23.0
+
